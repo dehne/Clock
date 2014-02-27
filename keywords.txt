@@ -1,0 +1,15 @@
+#
+# Syntax coloring map for RgbLed
+#
+
+#
+# Datatypes
+#
+Clock	KEYWORD1
+
+#
+# Methods
+#
+driveMicros	KEYWORD2
+driveSec	KEYWORD2
+cancelDrive	KEYWORD2
