@@ -65,7 +65,7 @@ void Clock::driveMicros(long amt) {
 
 }
 
-// Drive the clock forward by amt sec if > 0 or pause it if <0
+// Drive the clock forward by amt sec if > 0 or pause it if < 0
 void Clock::driveSec(long amt) {
 	accumSec += amt;										// Add amt to number of secs to work off
 }
