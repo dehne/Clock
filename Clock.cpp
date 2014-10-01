@@ -1,6 +1,6 @@
 /****
  *
- *   Part of the "Clock" library for Arduino. Version 1.0
+ *   Part of the "Clock" library for Arduino. Version 1.1
  *
  *   Clock.cpp Copyright 2013 by D. L. Ehnebuske 
  *   License terms: Creative Commons Attribution-ShareAlike 3.0 United States (CC BY-SA 3.0 US) 
@@ -57,12 +57,13 @@ void Clock::driveMicros(long amt) {
 		step();												//   Step the clock forward by one second
 		accumus -= 1000000;									//   Decrement amount left to advance by one second
 	}
+#ifndef FAST_TICK
 	if (accumus >= 500000) {								// If we need yet another step
 		delay(LAVET_STEP_INTERVAL);							//   Give the Lavet motor time to settle first
 		step();												//   Step the clock forward by one second
 		accumus -= 1000000;									//   Decrement amount left to advance by one second
   }
-
+#endif
 }
 
 // Drive the clock forward by amt sec if > 0 or pause it if < 0
