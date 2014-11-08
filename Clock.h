@@ -1,6 +1,6 @@
 /****
  *
- *   Part of the "Clock" library for Arduino. Version 1.1
+ *   Part of the "Clock" library for Arduino. Version 1.11
  *
  *   Clock.h Copyright 2013 by D. L. Ehnebuske 
  *   License terms: Creative Commons Attribution-ShareAlike 3.0 United States (CC BY-SA 3.0 US) 
@@ -24,9 +24,8 @@
 // Some constants
 #define LAVET_STEP_INTERVAL (200)			// Interval between steps of the Lavet motor (ms)
 #define LAVET_PULSE_DURATION (40)			// Duration of the pulses that move the Lavet motor (ms)
-
-// Compile-time options
-#define FAST_TICK							// Uncomment if driveMicros() is called more often than about every 0.6 sec
+#define LONG_TICK (650000)					// Approximate duration (μs) between invocations needed to safely 
+											//  do two step() invocations during one driveMicros()
 
 class Clock {
 private:
