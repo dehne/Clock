@@ -23,7 +23,7 @@
 
 // Some constants
 #define LAVET_STEP_INTERVAL (200)			// Interval between steps of the Lavet motor (ms)
-#define LAVET_PULSE_DURATION (40)			// Duration of the pulses that move the Lavet motor (ms)
+#define LAVET_PULSE_DURATION (60)			// Duration of the pulses that move the Lavet motor (ms)
 #define LONG_TICK (650000)					// Approximate duration (μs) between invocations needed to safely 
 											//  do two step() invocations during one driveMicros()
 
